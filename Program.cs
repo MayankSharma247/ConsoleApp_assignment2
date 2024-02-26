@@ -166,6 +166,28 @@ namespace GemHunters
                 PlayerMovement(p);
                 return;
             }
+
+            if (newR < 0 || newR >= 6 || newC < 0 || newC >= 6 || squareboard[newR, newC] == "O")
+            {
+                Console.WriteLine("Invalid input");
+                PlayerMovement(p);
+                return;
+            }
+
+            if (squareboard[newR, newC] == "G")
+            {
+                if (p == 1)
+                {
+                    Gems1 = Gems1 + 1;
+                }
+
+                else
+                {
+                    Gems2 = Gems2 + 1;
+                }
+
+
+                squareboard[newR, newC] = "-";
+            }
         }
     }
-}
