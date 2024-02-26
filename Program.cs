@@ -189,5 +189,21 @@ namespace GemHunters
 
                 squareboard[newR, newC] = "-";
             }
+
+
+            squareboard[currentR, currentC] = "-";
+            squareboard[newR, newC] = "P";
+
+            if (p == 1)
+            {
+                player1_A = newR;
+                player1_B = newC;
+            }
+            else
+            {
+                player2_A = newR;
+                player2_B = newC;
+            }
         }
     }
+}
